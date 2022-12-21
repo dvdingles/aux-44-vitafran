@@ -6,71 +6,47 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/3D GRAFITER.gltf");
+  const { nodes, materials } = useGLTF("/3D VITAFRAN.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Plano002.geometry}
-        material={materials["Material.002"]}
+        geometry={nodes["TQ_ARD-geom001"].geometry}
+        material={materials["TQ_ARD_front.001"]}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Plano003.geometry}
-        material={materials["Material.002"]}
+        geometry={nodes["TQ_ARD-geom001_1"].geometry}
+        material={materials["TQ_ARD_back.001"]}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Plano004.geometry}
-        material={materials["Material.002"]}
+        geometry={nodes["TQ_ARD-geom001_2"].geometry}
+        material={materials["TQ_ARD_edge.001"]}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Texto.geometry}
-        material={materials["Material.002"]}
-        position={[0.28, 0, -0.09]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 9]}
+        geometry={nodes["TQ_ARD-geom002"].geometry}
+        material={materials["TQ_ARD_front.002"]}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Texto001.geometry}
-        material={materials["Material.002"]}
-        position={[0, 0, 0.17]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 9]}
+        geometry={nodes["TQ_ARD-geom002_1"].geometry}
+        material={materials["TQ_ARD_back.002"]}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Texto002.geometry}
-        material={materials["Material.002"]}
-        position={[0.28, 0.8, -0.11]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 9]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom"].geometry}
-        material={materials.TQ_ARD_front}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom_1"].geometry}
-        material={materials.TQ_ARD_back}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom_2"].geometry}
-        material={materials.TQ_ARD_edge}
+        geometry={nodes["TQ_ARD-geom002_2"].geometry}
+        material={materials["TQ_ARD_edge.002"]}
       />
     </group>
   );
 }
 
-useGLTF.preload("/3D GRAFITER.gltf");
+useGLTF.preload("/3D VITAFRAN.gltf");
